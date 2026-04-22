@@ -1,0 +1,218 @@
+/* IBM Carbon Gray 100 theme — tokens used in this editor */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Surface */
+  --ui-bg: #161616;
+  --ui-01: #262626;
+  --ui-02: #393939;
+  --ui-03: #353535;
+  --ui-04: #6f6f6f;
+  --ui-05: #f4f4f4;
+  --hover-ui: #353535;
+  --hover-selected-ui: #4c4c4c;
+  --active-ui: #525252;
+  --selected-ui: #393939;
+  --field-01: #262626;
+  --field-02: #393939;
+  --border-subtle: #393939;
+  --border-strong: #6f6f6f;
+  --border-inverse: #ffffff;
+  --focus: #ffffff;
+  --path: #f1c21b;
+  --path-glow: rgba(241, 194, 27, 0.25);
+
+  /* Text */
+  --text-01: #f4f4f4;
+  --text-02: #c6c6c6;
+  --text-03: #6f6f6f;
+  --text-04: #ffffff;
+  --text-05: #8d8d8d;
+  --text-error: #ff8389;
+  --text-placeholder: #6f6f6f;
+
+  /* Icon */
+  --icon-01: #f4f4f4;
+  --icon-02: #c6c6c6;
+  --icon-03: #6f6f6f;
+
+  /* Interactive */
+  --interactive-01: #0f62fe;
+  --interactive-02: #6f6f6f;
+  --interactive-03: #ffffff;
+  --interactive-04: #4589ff;
+  --link-01: #78a9ff;
+  --link-inverse: #0f62fe;
+
+  /* Status */
+  --support-success: #24a148;
+  --support-error: #fa4d56;
+  --support-warning: #f1c21b;
+  --support-info: #4589ff;
+  --danger: #da1e28;
+  --danger-hover: #ba1b23;
+  --teal: #009e9a;
+  --teal-light: #3ddbd9;
+  --magenta: #d02670;
+  --purple: #8a3ffc;
+  --cyan: #1192e8;
+
+  /* Accent colors used in screenshots (Ruleset = teal, Filter = orange) */
+  --accent-teal: #08bdba;
+  --accent-orange: #ff832b;
+  --accent-yellow: #f1c21b;
+  --accent-green: #42be65;
+
+  /* Typography */
+  --font-sans: 'IBM Plex Sans', -apple-system, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+
+  /* Spacing scale — Carbon */
+  --sp-01: 2px;
+  --sp-02: 4px;
+  --sp-03: 8px;
+  --sp-04: 12px;
+  --sp-05: 16px;
+  --sp-06: 24px;
+  --sp-07: 32px;
+  --sp-08: 40px;
+  --sp-09: 48px;
+  --sp-10: 64px;
+
+  /* Transitions */
+  --dur-fast: 70ms;
+  --dur-moderate: 110ms;
+  --dur-slow: 240ms;
+  --ease-productive: cubic-bezier(0.2, 0, 0.38, 0.9);
+  --ease-expressive: cubic-bezier(0.4, 0.14, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ui-bg);
+  color: var(--text-01);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+#root { width: 100vw; height: 100vh; }
+
+/* Type tokens */
+.t-heading-01 { font-size: 14px; line-height: 18px; font-weight: 600; letter-spacing: 0.16px; }
+.t-heading-02 { font-size: 16px; line-height: 22px; font-weight: 600; }
+.t-heading-03 { font-size: 20px; line-height: 26px; font-weight: 400; }
+.t-heading-04 { font-size: 28px; line-height: 36px; font-weight: 400; }
+.t-heading-05 { font-size: 32px; line-height: 40px; font-weight: 300; }
+.t-body-01   { font-size: 14px; line-height: 18px; letter-spacing: 0.16px; }
+.t-body-02   { font-size: 16px; line-height: 22px; }
+.t-label-01  { font-size: 12px; line-height: 16px; letter-spacing: 0.32px; }
+.t-helper-01 { font-size: 12px; line-height: 16px; letter-spacing: 0.32px; color: var(--text-02); }
+.t-code-01   { font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.32px; }
+.t-code-02   { font-family: var(--font-mono); font-size: 14px; line-height: 20px; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px 0 16px;
+  border: none;
+  background: var(--interactive-01);
+  color: var(--text-04);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-productive);
+  min-width: 120px;
+}
+.btn:hover { background: #0353e9; }
+.btn-primary { background: #198038; }
+.btn-primary:hover { background: #0e6027; }
+.btn-secondary { background: var(--ui-03); color: var(--text-01); }
+.btn-secondary:hover { background: var(--hover-selected-ui); }
+.btn-ghost {
+  background: transparent;
+  color: var(--text-01);
+}
+.btn-ghost:hover { background: var(--hover-ui); }
+.btn-danger { background: var(--danger); color: #fff; }
+.btn-danger:hover { background: var(--danger-hover); }
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  color: var(--icon-01);
+  border: none;
+  cursor: pointer;
+  transition: background var(--dur-fast);
+}
+.btn-icon:hover { background: var(--hover-ui); }
+
+/* Inputs */
+.field {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 16px;
+  background: var(--field-01);
+  border: none;
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--text-01);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.16px;
+  outline: none;
+  transition: border-color var(--dur-fast);
+}
+.field:focus { border-bottom: 2px solid var(--focus); padding-bottom: 0; }
+.field::placeholder { color: var(--text-placeholder); }
+.field-label {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  color: var(--text-02);
+  margin-bottom: 6px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--ui-02); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--ui-04); }
+
+/* Focus ring — Carbon style */
+:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+/* Tooltip */
+.tip {
+  position: absolute;
+  background: var(--ui-05);
+  color: var(--ui-bg);
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 8px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 9999;
+  letter-spacing: 0.32px;
+}
